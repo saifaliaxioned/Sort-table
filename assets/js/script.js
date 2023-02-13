@@ -58,7 +58,7 @@ const buildTable = (data) => {
 }
 // initial table created
 buildTable(data);
-// function remove table row before next sorting
+// function to remove table row before next sorting
 const rowRemove = () => {
   let userRow = document.querySelectorAll('.user-row');
   userRow.forEach(element => {
