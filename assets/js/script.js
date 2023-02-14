@@ -67,6 +67,7 @@ const rowRemove = () => {
 }
 // event for sort data by serial number
 serialNum.addEventListener('click', () => {
+  console.log('hi');
   serialNum.classList.toggle('active');
   const serialData = data.sort(compareData('serialid', serialNum));
   rowRemove();
@@ -77,9 +78,9 @@ const compareData = (key, eventParam) => {
   return sortData = (a, b) => {
     if (key === 'serialid') {
       if (eventParam.classList.contains('active')) {
-        return a[key] - b[key];
-      } else {
         return b[key] - a[key];
+      } else {
+        return a[key] - b[key];
       }
     } else {
       const nameA = a[key].toUpperCase();
